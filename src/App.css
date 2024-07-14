@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+.nav {
+  position: fixed; /* Fixed position to stay on the left side */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  height: 100%; /* Full height of the viewport */
+  width: 200px; /* Width of the sidebar */
+  background-color: #F1EFE7; /* Tan background color */
+  border-right: 1px solid #ccc; /* Border on the right side */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.logo-container {
+  display: flex; /* Flex layout for centered positioning */
+  align-items: center; /* Center align items vertically */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  height: 200px; /* Adjust the height as per your logo dimensions */
+  width: auto;
+  margin-right: 1rem; /* Optional: Adds spacing between logo and nav links */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
 }
 
-.App-link {
-  color: #61dafb;
+.nav li {
+  padding: 10px 15px; /* Padding for list items */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Text color */
+  font-weight: bold; /* Bold text */
+}
+
+.nav li a:hover {
+  background-color: #f0f0f0; /* Light background color on hover */
+}
+.main-content {
+  margin-left: 400px; /* Ensure content starts after nav */
+  padding: 2rem; /* Optional: Adds padding for content */
 }

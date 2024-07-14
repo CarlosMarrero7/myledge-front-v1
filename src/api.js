@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8099/myledge'; // Base URL for the backend
+const API_URL = 'http://localhost:8081/myledger'; // Base URL for the backend
 
 // Accounts API
-export const fetchAccountsByUser = async (userId) => {
+export const fetchAccountsByUser = async (user_id) => {
   try {
-    const response = await axios.get(`${API_URL}/myledger/accounts/${userId}`);
+    const response = await axios.get(`${API_URL}/accounts/${user_id}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching accounts:', error);
@@ -16,7 +16,7 @@ export const fetchAccountsByUser = async (userId) => {
 // Payrolls API
 export const fetchPayrolls = async () => {
   try {
-    const response = await axios.get(`${API_URL}/myledger/payrolls`);
+    const response = await axios.get(`${API_URL}/payrolls`);
     return response.data;
   } catch (error) {
     console.error('Error fetching payrolls:', error);
@@ -27,7 +27,7 @@ export const fetchPayrolls = async () => {
 // Transactions API
 export const fetchTransactions = async () => {
   try {
-    const response = await axios.get(`${API_URL}/myledger/transactions`);
+    const response = await axios.get(`${API_URL}/transactions`);
     return response.data;
   } catch (error) {
     console.error('Error fetching transactions:', error);
@@ -38,7 +38,7 @@ export const fetchTransactions = async () => {
 // Users API
 export const fetchUsers = async () => {
   try {
-    const response = await axios.get(`${API_URL}/myledger/users`);
+    const response = await axios.get(`${API_URL}/users`);
     return response.data;
   } catch (error) {
     console.error('Error fetching users:', error);

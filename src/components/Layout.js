@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../App.css'; // Import your global styles
+
 
 const Layout = ({ children }) => {
   return (
     <div className="layout">
-      <header>
-        <h1>MyLedge App</h1>
-        <nav>
+      <header className="header">
+        <nav className='nav'>
+           <div className="logocontainer">
+          <img src="/Myledger.png" className="logo" alt="MyLedger Logo" />
+        </div>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/accounts">Accounts</Link></li>
@@ -17,9 +21,11 @@ const Layout = ({ children }) => {
           </ul>
         </nav>
       </header>
-      <main>
-        {children}
-      </main>
+      <div className="content-container">
+        <main className="main-content">
+          {children}
+        </main>
+      </div>
     </div>
   );
 };
