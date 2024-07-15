@@ -5,8 +5,10 @@ import Home from './components/Home';
 import Accounts from './components/Accounts';
 import Transactions from './components/Transactions';
 import Payroll from './components/Payroll';
-import Invoice from './components/Invoice';
 import Users from './components/Users';
+import Login from './components/Login';
+import Register from './components/Register';
+import Invoice from './components/Invoice';
 
 function App() {
   return (
@@ -14,11 +16,13 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/accounts" element={<Accounts userId={1} />} />
+          <Route path="/accounts" element={<Accounts />} />
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/payroll" element={<Payroll />} />
-          <Route path="/invoice" element={<Invoice />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/invoice" element={<Invoice />} />
         </Routes>
       </Layout>
     </Router>
