@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fetchAccountsByUser } from '../api';
+import { fetchAccountsByUser } from '../api'; // Correct import
 
 const Accounts = () => {
   const [user_id, setUserId] = useState(''); // State for user_id input
@@ -40,7 +40,6 @@ const Accounts = () => {
             <div>Account Number: {account.account_number}</div>
             <div>Bank Name: {account.bank_name}</div>
             <div>Balance: ${account.balance.toFixed(2)}</div>
-            {/* Adjust the rendering according to your accounts data structure */}
           </li>
         ))}
       </ul>
